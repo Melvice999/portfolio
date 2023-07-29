@@ -33,7 +33,7 @@ window.onscroll = function (event) {
 
     // change logo
     setTimeout(() => {
-      logo.src = "/asset/img/logo-dark.png";
+      logo.src = "./asset/img/logo-dark.png";
     }, delay);
   }
 
@@ -56,7 +56,7 @@ window.onscroll = function (event) {
 
     // change logo
     setTimeout(() => {
-      logo.src = "/asset/img/logo-light.png";
+      logo.src = "./asset/img/logo-light.png";
     }, delay);
   }
 };
