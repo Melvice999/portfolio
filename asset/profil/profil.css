@@ -1,4 +1,4 @@
-@import url("https://fonts.cdnfonts.com/css/modern-age");
+p@import url("https://fonts.cdnfonts.com/css/modern-age");
 
 .content-profil {
   margin-top: 11rem;
@@ -66,7 +66,6 @@ a.button-profil:hover {
   width: 20rem;
   height: 20rem;
   border-radius: 100%;
-  background-image: url("./asset/img/profil-img.jpg");
   background-size: 100%;
   overflow: hidden;
 }
