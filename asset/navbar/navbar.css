@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.4s;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+body {
+  background: #222222;
+  /* height: 1000vh; */
+}
+nav {
+  color: white;
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Navbar section */
+
+.nav {
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  text-align: center;
+}
+
+.nav div.logo {
+  position: absolute;
+  top: 10px;
+  animation: logo 2s linear infinite;
+}
+
+@keyframes logo {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(2%, 2%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+.nav div.main_list {
+  width: 600px;
+  height: 65px;
+  float: right;
+}
+
+.nav div.main_list ul {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  list-style: none;
+}
+
+.nav div.main_list ul li {
+  width: 120px;
+  height: 65px;
+}
+
+.nav div.main_list ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.nav div.main_list ul li a:hover {
+  color: #c0c0c0;
+}
+
+.nav div.media_button {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  display: none;
+}
+
+.nav div.media_button button.main_media_button {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.nav div.media_button button.main_media_button span {
+  width: 98%;
+  height: 2px;
+  display: block;
+  margin-top: 9px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(1) {
+  transform: rotateY(180deg);
+  transition: all 0.5s;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(2) {
+  transform: rotateY(180deg);
+  transition: all 0.4s;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(3) {
+  transform: rotateY(180deg);
+  transition: all 0.3s;
+}
+
+.nav div.media_button button.active span:nth-of-type(1) {
+  transform: rotate3d(0, 0, 1, 45deg);
+  position: absolute;
+  margin: 0;
+  top: 16px;
+}
+
+.nav div.media_button button.active span:nth-of-type(2) {
+  margin-top: 35px;
+  visibility: hidden;
+}
+
+.nav div.media_button button.active span:nth-of-type(3) {
+  transform: rotate3d(0, 0, 1, -45deg);
+  position: absolute;
+  margin: 0;
+  top: 16px;
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(1) {
+  transform: rotate3d(0, 0, 1, 410deg);
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(3) {
+  transform: rotate3d(0, 0, 1, -410deg);
+}
+
+
+/* Home section */
+
+/* .home{
+    width: 100%;
+    height: 100vh;
+    background-color: #ddd;
+} */
+
+/* Medai qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 0;
+  }
+
+  .nav div.logo {
+    margin-left: 15px;
+  }
+
+  .nav div.main_list {
+    width: 100%;
+    margin-top: 65px;
+    height: 0px;
+    overflow: hidden;
+  }
+
+  .nav div.show_list {
+    height: 300px;
+  }
+
+  .nav div.main_list ul {
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    top: 80px;
+    right: 0;
+    left: 0;
+  }
+
+  .nav div.main_list ul li {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+  }
+
+  .nav div.main_list ul li a {
+    color: black !important;
+    text-align: center;
+    line-height: 40px;
+    width: 100%;
+    height: 40px;
+    display: table;
+  }
+
+  .nav div.media_button {
+    display: block;
+  }
+}
+
+/* Scroll */
+#span-scroll {
+  width: 100%;
+  height: 65px;
+}
+.span-back {
+  position: fixed;
+  font-size: 25px;
+  border: 1px solid white;
+  background-color: white;
+  animation: span-back 0.2s forwards reverse;
+}
+.span-scroll {
+  position: fixed;
+  font-size: 25px;
+  border: 1px solid white;
+  background-color: white;
+  animation: span-scroll 0.2s forwards;
+}
+@keyframes span-scroll {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes span-back {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+.nav div.media_button button.main_media_button .span-scroll span {
+  background-color: black;
+}

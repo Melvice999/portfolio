@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>M. Syakirin | Portfolio</title>
+    <link
+      rel="shortcut icon"
+      href="/asset/img/favico.png"
+      type="image/x-icon"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#navbar").load("/asset/navbar/navbar.html");
+        $("#profil").load("/asset/profil/profil.html");
+      });
+    </script>
+
+    <style>
+      #navbar {
+        z-index: 1;
+        position: absolute;
+      }
+      #content {
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="content">
+      <div id="navbar"></div>
+      <div id="profil"></div>
+    </div>
+  </body>
+</html>
