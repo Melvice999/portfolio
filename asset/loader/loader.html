@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .center-loader {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: #000; */
+      }
+      .wave-loader {
+        width: 5px;
+        height: 100px;
+        background: linear-gradient(45deg, blue, red);
+        margin: 10px;
+        animation: wave-loader 1s linear infinite;
+        border-radius: 20px;
+      }
+      .wave-loader:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .wave-loader:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .wave-loader:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      .wave-loader:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      .wave-loader:nth-child(6) {
+        animation-delay: 0.5s;
+      }
+      .wave-loader:nth-child(7) {
+        animation-delay: 0.6s;
+      }
+      .wave-loader:nth-child(8) {
+        animation-delay: 0.7s;
+      }
+      .wave-loader:nth-child(9) {
+        animation-delay: 0.8s;
+      }
+      .wave-loader:nth-child(10) {
+        animation-delay: 0.9s;
+      }
+
+      @keyframes wave-loader {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center-loader">
+      <div class="wave-loader"></div>
+      <div class="wave-loader"></div>
+      <div class="wave-loader"></div>
+      <div class="wave-loader"></div>
+      <div class="wave-loader"></div>
+      <div class="wave-loader"></div>
+      <div class="wave-loader"></div>
+      <div class="wave-loader"></div>
+      <div class="wave-loader"></div>
+      <div class="wave-loader"></div>
+    </div>
+  </body>
+</html>
