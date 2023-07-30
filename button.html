@@ -11,282 +11,72 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- <style>
-    .module {
-      border-left: 5px solid black;
-      cursor: pointer;
-    }
-    .module .title {
-      padding: 2rem 0 2rem 1rem;
-      margin-top: 2rem;
-    }
-    .title {
-      /* border-bottom: 5px solid black; */
-      width: 15rem;
-    }
-    .wrap, .details, .timeframe{
-      display: none;
-    }
-  </style> -->
-  </head>
-  <body>
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      .stick-experience {
+        /* border-left: 5px solid black; */
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
       }
-      .center-loader {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* background: #000; */
+      .title-experience {
+        /* position: absolute; */
+        padding: 2rem 0 2rem 1rem;
+        margin-top: 2rem;
+        cursor: pointer;
+        /* border-bottom: 5px solid black; */
+        width: 10rem;
+        /* overflow: hidden; */
+        border-left: 5px solid black;
       }
-      .wave-loader {
-        width: 5px;
-        height: 100px;
-        background: linear-gradient(45deg, blue, red);
-        margin: 10px;
-        animation: wave-loader 1s linear infinite;
-        border-radius: 20px;
+ 
+      .toggle-first-experience {
+        /* content: ""; */
+        /* width: 100%; */
+        /* bottom: 0; */
+        /* left: 0; */
+        /* position: absolute; */
+        /* display: none; */
+        border-bottom: 5px solid black;
+        animation: title-experience linear 5s;
       }
-      .wave-loader:nth-child(2) {
-        animation-delay: 0.1s;
-      }
-      .wave-loader:nth-child(3) {
-        animation-delay: 0.2s;
-      }
-      .wave-loader:nth-child(4) {
-        animation-delay: 0.3s;
-      }
-      .wave-loader:nth-child(5) {
-        animation-delay: 0.4s;
-      }
-      .wave-loader:nth-child(6) {
-        animation-delay: 0.5s;
-      }
-      .wave-loader:nth-child(7) {
-        animation-delay: 0.6s;
-      }
-      .wave-loader:nth-child(8) {
-        animation-delay: 0.7s;
-      }
-      .wave-loader:nth-child(9) {
-        animation-delay: 0.8s;
-      }
-      .wave-loader:nth-child(10) {
-        animation-delay: 0.9s;
-      }
-
-      @keyframes wave-loader {
+      @keyframes title-experience {
         0% {
-          transform: scale(0);
-        }
-        50% {
-          transform: scale(1);
+          left: 0;
         }
         100% {
-          transform: scale(0);
+          left: 100%;
         }
       }
+
+      .wrap-experience {
+        position: absolute;
+        text-align: justify;
+        left: 20rem;
+        right: 10rem;
+        top: 2rem;
+      }
+      .first-experience,
+      .second-experience {
+        display: none;
+      }
     </style>
-
-    <div class="center-loader">
-      <div class="wave-loader"></div>
-      <div class="wave-loader"></div>
-      <div class="wave-loader"></div>
-      <div class="wave-loader"></div>
-      <div class="wave-loader"></div>
-      <div class="wave-loader"></div>
-      <div class="wave-loader"></div>
-      <div class="wave-loader"></div>
-      <div class="wave-loader"></div>
-      <div class="wave-loader"></div>
-    </div>
-
- 
-    <body>
-      <h3>A for loop demo</h3>
-      <div class="divclass" id="fordemo"></div>
-      
-      
-      <script type="text/javascript">
-      var y = "<div class='wave-loader'>";
-      var display_for = "T";
-      for (x=1; x < 20; x++){
-          display_for += y+;
-          }
-
-          $(".center-loader").html(display_for);
-      </script>
-
-    <!-- <script>
-      $(document).ready(function () {
-        for (x = 10; x >= 1; x--) {
-          display_for += x + "<BR>";
-        }
-
-        document.getElementById("fordemo").innerHTML = display_for;
-      });
-    </script> -->
-
-    <!-- <div class="module">
-    <div class="left">
-      <div selected="" class="HomeExp__TitleBlockWrapper-sc-1yahy8h-1 fcuBTe">
-        <div class="title">
-          <button id="module">The Noun Project</button>
-          <div selected="" class="HomeExp__Arrow-sc-1yahy8h-2 imMnuJ"></div>
+  </head>
+  <body>
+    <!--  -->
+    <div class="stick-experience">
+      <span class="title-experience">
+        The Noun Project
+      </span>
+      <div class="wrap-experience">
+        <div class="timeframe-experience first-experience">
+          May 2019 - Present
         </div>
-        <div
-          selected=""
-          class="HomeExp__TitleDetailBlockWrapper-sc-1yahy8h-4 fGkwJA"
-        >
-          <div class="wrap">
-            <div class="position-sm"><span></span></div>
-            <div id="timeframe"><span>May 2019 - Present</span></div>
-            <div class="details">
-              <p>
-                The Noun Project is a global marketplace for design assets serving
-                millions. I work on the web application &amp; Sketch plugin for
-                their digital asset manager, Lingo (lingoapp.com). The tech stack
-                at the Noun Project consist primarily of:
-              </p>
-              <ul>
-                <li>Python (Django &amp; Flask)</li>
-                <li>React (Redux &amp; Hooks)</li>
-                <li>CSS-in-JS (Emotion)</li>
-                <li>Docker</li>
-                <li>AWS</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="HomeExp__TitleBlockWrapper-sc-1yahy8h-1 effnVe">
-        <div class="title">
-          <span>Wondersauce</span>
-          <div class="HomeExp__Arrow-sc-1yahy8h-2 iQMvNh"></div>
-        </div>
-        <div class="HomeExp__TitleDetailBlockWrapper-sc-1yahy8h-4 cAEamM">
-          <div class="wrap">
-            <div class="position-sm"><span></span></div>
-            <div class="timeframe-sm"><span>July 2018 - May 2019</span></div>
-            <div class="details">
-              <p>
-                Wondersauce is a digitally led integrated advertising agency. At
-                Wondersauce, I've worked on and led projects using a variety of
-                web development technologies, including:
-              </p>
-              <ul>
-                <li>React, React Native, Vue</li>
-                <li>SSG's (Gatsby, React Static, Nuxt) + Netlify</li>
-                <li>Wordpress, Shopify</li>
-                <li>Google Cloud Platform</li>
-                <li>Firebase/Firestore</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="HomeExp__TitleBlockWrapper-sc-1yahy8h-1 effnVe">
-        <div class="title">
-          <span>Sensai</span>
-          <div class="HomeExp__Arrow-sc-1yahy8h-2 iQMvNh"></div>
-        </div>
-        <div class="HomeExp__TitleDetailBlockWrapper-sc-1yahy8h-4 cAEamM">
-          <div class="wrap">
-            <div class="position-sm"><span></span></div>
-            <div class="timeframe-sm"><span>February 2016 - July 2018</span></div>
-            <div class="details">
-              <p>
-                Sens.ai was a social media companion hybrid application. I worked
-                on various parts of the business:
-              </p>
-              <ul>
-                <li>
-                  Worked on numerous features of React/Redux hybrid app. The app
-                  consumed APIs written in Go, and was containerized with Docker.
-                  App was shipped to Apple/Android marketplaces with Cordova
-                </li>
-                <li>
-                  Worked on rebuilding the frontend of our internal Ruby on Rails
-                  app by integrating React/Redux
-                </li>
-                <li>
-                  Developed Wordpress websites using my own custom
-                  Underscores/SCSS/Gulp/Parcel starter theme
-                </li>
-                <li>Created application mockups &amp; wireframes using Sketch</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="HomeExp__TitleBlockWrapper-sc-1yahy8h-1 effnVe">
-        <div class="title">
-          <span>South Mission</span>
-          <div class="HomeExp__Arrow-sc-1yahy8h-2 iQMvNh"></div>
-        </div>
-        <div class="HomeExp__TitleDetailBlockWrapper-sc-1yahy8h-4 cAEamM">
-          <div class="wrap">
-            <div class="position-sm"><span></span></div>
-            <div class="timeframe-sm"><span>October 2015 - Present</span></div>
-            <div class="details">
-              <p>
-                South Mission is a small collection of freelance web developers,
-                designers &amp; digital marketers I founded with a partner. I run
-                the web development for all projects handled through our team of
-                3-4 freelancers. We offer:
-              </p>
-              <ul>
-                <li>Web &amp; Application Development</li>
-                <li>Search Engine Optimization</li>
-                <li>Pay-Per-Click (PPC)</li>
-                <li>Social Media Advertising</li>
-                <li>Lead Generation</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="HomeExp__TitleBlockWrapper-sc-1yahy8h-1 effnVe">
-        <div class="title">
-          <span>Coalition Technologies</span>
-          <div class="HomeExp__Arrow-sc-1yahy8h-2 iQMvNh"></div>
-        </div>
-        <div class="HomeExp__TitleDetailBlockWrapper-sc-1yahy8h-4 cAEamM">
-          <div class="wrap">
-            <div class="position-sm"><span></span></div>
-            <div class="timeframe-sm"><span>May 2015 - Feb 2016</span></div>
-            <div class="details">
-              <p>
-                Coalition Technologies is a premier digital agency offering web
-                development in Los Angeles, California. I was responsible for the
-                timely and efficient coordination of the following:
-              </p>
-              <ul>
-                <li>Custom Wordpress, Shopify &amp; Magento builds</li>
-                <li>Mobile/Responsive Design</li>
-                <li>SEO Optimization</li>
-                <li>PPC/SEM Accounts</li>
-                <li>Link Building</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="right">
-      <div selected="" class="HomeExp__DetailBlockWrapper-sc-1yahy8h-3 heIlrw">
-        <div class="position"><span></span></div>
-        <div class="timeframe"><span>May 2019 - Present</span></div>
-        <div class="details">
+        <div class="details-experience first-experience">
           <p>
             The Noun Project is a global marketplace for design assets serving
-            millions. I work on the web application &amp; Sketch plugin for their
-            digital asset manager, Lingo (lingoapp.com). The tech stack at the
-            Noun Project consist primarily of:
+            millions. I work on the web application &amp; Sketch plugin for
+            their digital asset manager, Lingo (lingoapp.com). The tech stack at
+            the Noun Project consist primarily of:
           </p>
           <ul>
             <li>Python (Django &amp; Flask)</li>
@@ -297,10 +87,13 @@
           </ul>
         </div>
       </div>
-      <div class="HomeExp__DetailBlockWrapper-sc-1yahy8h-3 hRmYsF">
-        <div class="position"><span></span></div>
-        <div class="timeframe"><span>July 2018 - May 2019</span></div>
-        <div class="details">
+      <!-- 
+      <div class="title-experience toggle-second-experience">Wondersauce</div>
+      <div class="wrap-experience">
+        <div class="timeframe-experience second-experience">
+          July 2018 - May 2019
+        </div>
+        <div class="details-experience second-experience">
           <p>
             Wondersauce is a digitally led integrated advertising agency. At
             Wondersauce, I've worked on and led projects using a variety of web
@@ -314,79 +107,180 @@
             <li>Firebase/Firestore</li>
           </ul>
         </div>
-      </div>
-      <div class="HomeExp__DetailBlockWrapper-sc-1yahy8h-3 hRmYsF">
-        <div class="position"><span></span></div>
-        <div class="timeframe"><span>February 2016 - July 2018</span></div>
-        <div class="details">
-          <p>
-            Sens.ai was a social media companion hybrid application. I worked on
-            various parts of the business:
-          </p>
-          <ul>
-            <li>
-              Worked on numerous features of React/Redux hybrid app. The app
-              consumed APIs written in Go, and was containerized with Docker. App
-              was shipped to Apple/Android marketplaces with Cordova
-            </li>
-            <li>
-              Worked on rebuilding the frontend of our internal Ruby on Rails app
-              by integrating React/Redux
-            </li>
-            <li>
-              Developed Wordpress websites using my own custom
-              Underscores/SCSS/Gulp/Parcel starter theme
-            </li>
-            <li>Created application mockups &amp; wireframes using Sketch</li>
-          </ul>
-        </div>
-      </div>
-      <div class="HomeExp__DetailBlockWrapper-sc-1yahy8h-3 hRmYsF">
-        <div class="position"><span></span></div>
-        <div class="timeframe"><span>October 2015 - Present</span></div>
-        <div class="details">
-          <p>
-            South Mission is a small collection of freelance web developers,
-            designers &amp; digital marketers I founded with a partner. I run the
-            web development for all projects handled through our team of 3-4
-            freelancers. We offer:
-          </p>
-          <ul>
-            <li>Web &amp; Application Development</li>
-            <li>Search Engine Optimization</li>
-            <li>Pay-Per-Click (PPC)</li>
-            <li>Social Media Advertising</li>
-            <li>Lead Generation</li>
-          </ul>
-        </div>
-      </div>
-      <div class="HomeExp__DetailBlockWrapper-sc-1yahy8h-3 hRmYsF">
-        <div class="position"><span></span></div>
-        <div class="timeframe"><span>May 2015 - Feb 2016</span></div>
-        <div class="details">
-          <p>
-            Coalition Technologies is a premier digital agency offering web
-            development in Los Angeles, California. I was responsible for the
-            timely and efficient coordination of the following:
-          </p>
-          <ul>
-            <li>Custom Wordpress, Shopify &amp; Magento builds</li>
-            <li>Mobile/Responsive Design</li>
-            <li>SEO Optimization</li>
-            <li>PPC/SEM Accounts</li>
-            <li>Link Building</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+      </div> -->
 
-  <script>
-    $(document).ready(function(){
-      $(".module").click(function(){
-        $(".timeframe").show();
-      });
-    });
-    </script> -->
+      <script>
+        $(document).ready(function () {
+          $(".title-experience").click(function () {
+            $(".first-experience").show();
+            $(".title-experience").addClass('toggle-first-experience');
+            $(".second-experience").hide();
+          });
+        });
+        $(document).ready(function () {
+          $(".toggle-second-experience").click(function () {
+            $(".second-experience").show();
+            $(".first-experience").hide();
+          });
+        });
+      </script>
+
+      <!-- <div class="title"></div>
+      <div class="timeframe"></div>
+      <div class="details">
+        
+      </div>
+
+      
+      <div class="title">Sensai</div>
+      <div class="timeframe">February 2016 - July 2018</div>
+      <div class="details">
+        <p>
+          Sens.ai was a social media companion hybrid application. I worked on
+          various parts of the business:
+        </p>
+        <ul>
+          <li>
+            Worked on numerous features of React/Redux hybrid app. The app
+            consumed APIs written in Go, and was containerized with Docker. App
+            was shipped to Apple/Android marketplaces with Cordova
+          </li>
+          <li>
+            Worked on rebuilding the frontend of our internal Ruby on Rails app
+            by integrating React/Redux
+          </li>
+          <li>
+            Developed Wordpress websites using my own custom
+            Underscores/SCSS/Gulp/Parcel starter theme
+          </li>
+          <li>Created application mockups &amp; wireframes using Sketch</li>
+        </ul>
+      </div>
+
+      <div class="title">South Mission</div>
+      <div class="timeframe">October 2015 - Present</div>
+      <div class="details">
+        <p>
+          South Mission is a small collection of freelance web developers,
+          designers &amp; digital marketers I founded with a partner. I run the
+          web development for all projects handled through our team of 3-4
+          freelancers. We offer:
+        </p>
+        <ul>
+          <li>Web &amp; Application Development</li>
+          <li>Search Engine Optimization</li>
+          <li>Pay-Per-Click (PPC)</li>
+          <li>Social Media Advertising</li>
+          <li>Lead Generation</li>
+        </ul>
+      </div>
+
+      <div class="title">Coalition Technologies</div>
+      <div class="timeframe">May 2015 - Feb 2016</div>
+      <div class="details">
+        <p>
+          Coalition Technologies is a premier digital agency offering web
+          development in Los Angeles, California. I was responsible for the
+          timely and efficient coordination of the following:
+        </p>
+        <ul>
+          <li>Custom Wordpress, Shopify &amp; Magento builds</li>
+          <li>Mobile/Responsive Design</li>
+          <li>SEO Optimization</li>
+          <li>PPC/SEM Accounts</li>
+          <li>Link Building</li>
+        </ul>
+      </div>
+
+      <div class="timeframe">May 2019 - Present</div>
+      <div class="details">
+        <p>
+          The Noun Project is a global marketplace for design assets serving
+          millions. I work on the web application &amp; Sketch plugin for their
+          digital asset manager, Lingo (lingoapp.com). The tech stack at the
+          Noun Project consist primarily of:
+        </p>
+        <ul>
+          <li>Python (Django &amp; Flask)</li>
+          <li>React (Redux &amp; Hooks)</li>
+          <li>CSS-in-JS (Emotion)</li>
+          <li>Docker</li>
+          <li>AWS</li>
+        </ul>
+      </div>
+
+      <div class="timeframe">July 2018 - May 2019</div>
+      <div class="details">
+        <p>
+          Wondersauce is a digitally led integrated advertising agency. At
+          Wondersauce, I've worked on and led projects using a variety of web
+          development technologies, including:
+        </p>
+        <ul>
+          <li>React, React Native, Vue</li>
+          <li>SSG's (Gatsby, React Static, Nuxt) + Netlify</li>
+          <li>Wordpress, Shopify</li>
+          <li>Google Cloud Platform</li>
+          <li>Firebase/Firestore</li>
+        </ul>
+      </div>
+
+      <div class="timeframe">February 2016 - July 2018</div>
+      <div class="details">
+        <p>
+          Sens.ai was a social media companion hybrid application. I worked on
+          various parts of the business:
+        </p>
+        <ul>
+          <li>
+            Worked on numerous features of React/Redux hybrid app. The app
+            consumed APIs written in Go, and was containerized with Docker. App
+            was shipped to Apple/Android marketplaces with Cordova
+          </li>
+          <li>
+            Worked on rebuilding the frontend of our internal Ruby on Rails app
+            by integrating React/Redux
+          </li>
+          <li>
+            Developed Wordpress websites using my own custom
+            Underscores/SCSS/Gulp/Parcel starter theme
+          </li>
+          <li>Created application mockups &amp; wireframes using Sketch</li>
+        </ul>
+      </div>
+
+      <div class="timeframe">October 2015 - Present</div>
+      <div class="details">
+        <p>
+          South Mission is a small collection of freelance web developers,
+          designers &amp; digital marketers I founded with a partner. I run the
+          web development for all projects handled through our team of 3-4
+          freelancers. We offer:
+        </p>
+        <ul>
+          <li>Web &amp; Application Development</li>
+          <li>Search Engine Optimization</li>
+          <li>Pay-Per-Click (PPC)</li>
+          <li>Social Media Advertising</li>
+          <li>Lead Generation</li>
+        </ul>
+      </div>
+
+      <div class="timeframe">May 2015 - Feb 2016</div>
+      <div class="details">
+        <p>
+          Coalition Technologies is a premier digital agency offering web
+          development in Los Angeles, California. I was responsible for the
+          timely and efficient coordination of the following:
+        </p>
+        <ul>
+          <li>Custom Wordpress, Shopify &amp; Magento builds</li>
+          <li>Mobile/Responsive Design</li>
+          <li>SEO Optimization</li>
+          <li>PPC/SEM Accounts</li>
+          <li>Link Building</li>
+        </ul>
+      </div> -->
+    </div>
   </body>
 </html>

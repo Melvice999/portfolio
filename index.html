@@ -10,9 +10,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
       $(function () {
+        $("#loader").load("./asset/loader/loader.html");
         $("#navbar").load("./asset/navbar/navbar.html");
         $("#profil").load("./asset/profil/profil.html");
-        $("#loader").load("./asset/loader/loader.html");
+        $("#footer").load("./asset/footer/footer.html");
       });
     </script>
 
@@ -25,6 +26,9 @@
         position: absolute;
         display: none;
       }
+      #footer {
+        margin-top: 10rem;
+      }
     </style>
   </head>
 
@@ -34,6 +38,7 @@
     <div id="content">
       <div id="navbar"></div>
       <div id="profil"></div>
+      <div id="footer"></div>
     </div>
 
     <script>
